@@ -1,10 +1,10 @@
 angular.module('myApp', [])
 	.controller('myCtrl', function($scope, $http) {
 		$scope.programList = []
-		
+		$scope.date = new Date();
 		$http({
 			method: 'GET',
-			url: 'data.json',
+			url: 'data.json'+$scope.data,
 			dataType: 'json',
 			contentType: "application/json"
 		 }).then(function (success){
