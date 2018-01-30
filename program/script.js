@@ -8,7 +8,7 @@ angular.module('myApp', [])
 			dataType: 'json',
 			contentType: "application/json"
 		 }).then(function (success){
-			 alert(JSON.stringify(success))
+			 //alert(JSON.stringify(success))
 			$scope.programList = success.data;
 			//$scope.firstName = $scope.programList[0].Details;
 			//console.log(JSON.stringify($scope.programList));
