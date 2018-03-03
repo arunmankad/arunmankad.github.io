@@ -1,2 +1,0 @@
-# arunmankad.github.io
-test
