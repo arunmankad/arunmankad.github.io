@@ -277,7 +277,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(route, eventService, visitService, peopleService) {
-        var _this = this;
         this.route = route;
         this.eventService = eventService;
         this.visitService = visitService;
@@ -315,9 +314,9 @@ var HomeComponent = /** @class */ (function () {
             }
         ];
         // example of a hacky way to add an image to the carousel dynamically
-        window.setTimeout(function () {
-            _this.imageURLs = [_this.imageURLs[0]].concat(_this.imageURLs); // duplicate the first iamge
-        }, 1000);
+        /*window.setTimeout(() => {
+          this.imageURLs = [this.imageURLs[0], ...this.imageURLs]; // duplicate the first iamge
+        },1000); */
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
