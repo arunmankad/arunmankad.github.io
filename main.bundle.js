@@ -323,7 +323,7 @@ var HomeComponent = /** @class */ (function () {
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = params['id'];
             if (_this.id === undefined) {
-                _this.id = 'yQNWxamwbBR6LG9ECUSn';
+                _this.id = 'oGmFKEVGZXCLxNdAlLA2';
             }
             _this.eventService.getVisitEvents(_this.id).subscribe(function (events) {
                 console.log(events);
@@ -655,14 +655,36 @@ var VisitService = /** @class */ (function () {
 var environment = {
     production: false,
     firebase: {
-        apiKey: 'AIzaSyCYPJFw_gq2VFDPoRDKdYs0ZKeGtY_7lwM',
-        authDomain: 'testpro-88462.firebaseapp.com',
-        databaseURL: 'https://testpro-88462.firebaseio.com',
-        projectId: 'testpro-88462',
-        storageBucket: 'testpro-88462.appspot.com',
-        messagingSenderId: '266482963402'
+        apiKey: "AIzaSyBTrT2MUF0nutn8PTVuGFdpMLYlsOGiTic",
+        authDomain: "utc-vist.firebaseapp.com",
+        databaseURL: "https://utc-vist.firebaseio.com",
+        projectId: "utc-vist",
+        storageBucket: "utc-vist.appspot.com",
+        messagingSenderId: "573791561636"
     }
 };
+/*
+
+ustutc
+
+apiKey: "AIzaSyBTrT2MUF0nutn8PTVuGFdpMLYlsOGiTic",
+authDomain: "utc-vist.firebaseapp.com",
+databaseURL: "https://utc-vist.firebaseio.com",
+projectId: "utc-vist",
+storageBucket: "utc-vist.appspot.com",
+messagingSenderId: "573791561636"
+
+
+arunmankad
+
+apiKey: 'AIzaSyCYPJFw_gq2VFDPoRDKdYs0ZKeGtY_7lwM',
+authDomain: 'testpro-88462.firebaseapp.com',
+databaseURL: 'https://testpro-88462.firebaseio.com',
+projectId: 'testpro-88462',
+storageBucket: 'testpro-88462.appspot.com',
+messagingSenderId: '266482963402'
+
+*/ 
 
 
 /***/ }),
