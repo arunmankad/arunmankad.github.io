@@ -147,7 +147,7 @@ module.exports = ".page-footer {\n    padding-top: 0;\n    color: #fff;\n    bac
 /***/ "./src/app/components/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"page-footer\">\n  <div class=\"footer-copyright\">\n    <span class=\" center-align\"> © 2018 Copyright Text</span>\n  </div>\n</footer>"
+module.exports = "<footer class=\"page-footer\">\n  <div class=\"footer-copyright\">\n    <span class=\" center-align\"> © 2018 UST Global</span>\n  </div>\n</footer>"
 
 /***/ }),
 
