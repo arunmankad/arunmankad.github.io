@@ -11,6 +11,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
 <title>sapling to tree</title>
 <!-- write your code here -->
 <style>
@@ -20,6 +24,11 @@
 	left:0;right:0;
 	top:0;bottom:0;
   }
+
+  .search {
+    width: 20em;  height: 4em;
+	background-color: #4CAF50;
+}
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 <script src="sapling to tree.js?1522336789666"></script>
@@ -115,7 +124,7 @@ function resetTree() {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:550px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
-	<button onclick="myFunction()">Grow up!</button>
-	<button onclick="resetTree()">Reset</button>
+	<button class="search" onclick="myFunction()">Grow up!</button>
+	<button class="search" onclick="resetTree()">Reset</button>
 </body>
 </html>
