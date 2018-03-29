@@ -8,11 +8,54 @@ lib.ssMetadata = [];
 
 
 
+(lib.play_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer 2
+	this.text = new cjs.Text("play", "24px 'Arial'");
+	this.text.lineHeight = 29;
+	this.text.lineWidth = 100;
+	this.text.parent = this;
+	this.text.setTransform(56,17.9);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(4));
+
+	// Layer 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(0.2,1,1).p("AtHllIaPAAIAALLI6PAAg");
+	this.shape.setTransform(84,35.8);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FF6600").s().p("AtHFmIAArLIaPAAIAALLg");
+	this.shape_1.setTransform(84,35.8);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_1},{t:this.shape}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).to({state:[{t:this.shape_1},{t:this.shape}]},1).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,170,73.6);
+
+
 // stage content:
 (lib.balantree = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
+	this.frame_0 = function() {
+		/* Mouse Click Event
+		Clicking on the specified symbol instance executes a function in which you can add your own custom code.
+		
+		Instructions:
+		1. Add your custom code on a new line after the line that says "// Start your custom code" below.
+		The code will execute when the symbol instance is clicked.
+		*/
+		
+		this.play_btn.addEventListener("click", fl_MouseClickHandler.bind(this));
+		
+		function fl_MouseClickHandler()
+		{
+			this.gotoAndPlay(0);
+		}
+	}
 	this.frame_57 = function() {
 		/* Stop at This Frame
 		The Flash timeline will stop/pause at the frame where you insert this code.
@@ -23,7 +66,7 @@ lib.ssMetadata = [];
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(57).call(this.frame_57).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(57).call(this.frame_57).wait(15));
 
 	// tree
 	this.shape = new cjs.Shape();
@@ -881,11 +924,16 @@ lib.ssMetadata = [];
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).to({state:[{t:this.shape_4}]},1).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).to({state:[{t:this.shape_9},{t:this.shape_8}]},1).to({state:[{t:this.shape_11},{t:this.shape_10}]},1).to({state:[{t:this.shape_13},{t:this.shape_12,p:{x:259.6,y:538.8}}]},1).to({state:[{t:this.shape_15},{t:this.shape_14,p:{x:241.2,y:513.2}}]},2).to({state:[{t:this.shape_17},{t:this.shape_12,p:{x:231.6,y:495.6}},{t:this.shape_16}]},2).to({state:[{t:this.shape_20},{t:this.shape_19},{t:this.shape_18}]},2).to({state:[{t:this.shape_23},{t:this.shape_22},{t:this.shape_21}]},1).to({state:[{t:this.shape_26},{t:this.shape_25},{t:this.shape_24}]},1).to({state:[{t:this.shape_26},{t:this.shape_25},{t:this.shape_27,p:{y:450.3}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28},{t:this.shape_14,p:{x:218,y:448.4}}]},1).to({state:[{t:this.shape_26},{t:this.shape_29},{t:this.shape_14,p:{x:218.4,y:451.1}}]},1).to({state:[{t:this.shape_26},{t:this.shape_30},{t:this.shape_27,p:{y:451.3}}]},1).to({state:[{t:this.shape_30},{t:this.shape_33},{t:this.shape_32},{t:this.shape_31}]},1).to({state:[{t:this.shape_30},{t:this.shape_35},{t:this.shape_34},{t:this.shape_31}]},1).to({state:[{t:this.shape_30},{t:this.shape_37},{t:this.shape_36}]},1).to({state:[{t:this.shape_30},{t:this.shape_39},{t:this.shape_37},{t:this.shape_38}]},1).to({state:[{t:this.shape_30},{t:this.shape_41},{t:this.shape_37},{t:this.shape_40}]},1).to({state:[{t:this.shape_43},{t:this.shape_30},{t:this.shape_37},{t:this.shape_42}]},1).to({state:[{t:this.shape_48},{t:this.shape_30},{t:this.shape_47},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44}]},1).to({state:[{t:this.shape_53},{t:this.shape_52},{t:this.shape_51},{t:this.shape_50},{t:this.shape_49},{t:this.shape_47}]},2).to({state:[{t:this.shape_57},{t:this.shape_56},{t:this.shape_55},{t:this.shape_51},{t:this.shape_54}]},2).to({state:[{t:this.shape_62},{t:this.shape_61},{t:this.shape_60},{t:this.shape_59},{t:this.shape_58}]},1).to({state:[{t:this.shape_67},{t:this.shape_66},{t:this.shape_65},{t:this.shape_64},{t:this.shape_63}]},1).to({state:[{t:this.shape_72},{t:this.shape_71},{t:this.shape_70},{t:this.shape_69},{t:this.shape_68}]},1).to({state:[{t:this.shape_77},{t:this.shape_76},{t:this.shape_75},{t:this.shape_74},{t:this.shape_73}]},1).to({state:[{t:this.shape_88},{t:this.shape_87},{t:this.shape_86},{t:this.shape_85},{t:this.shape_84},{t:this.shape_83},{t:this.shape_82},{t:this.shape_81},{t:this.shape_80},{t:this.shape_79},{t:this.shape_78}]},2).to({state:[{t:this.shape_99},{t:this.shape_98},{t:this.shape_97},{t:this.shape_96},{t:this.shape_95},{t:this.shape_94},{t:this.shape_93},{t:this.shape_92},{t:this.shape_91},{t:this.shape_90},{t:this.shape_89}]},1).to({state:[{t:this.shape_110},{t:this.shape_109},{t:this.shape_108},{t:this.shape_107},{t:this.shape_106},{t:this.shape_105},{t:this.shape_104},{t:this.shape_103},{t:this.shape_102},{t:this.shape_101},{t:this.shape_100}]},1).to({state:[{t:this.shape_121},{t:this.shape_120},{t:this.shape_119},{t:this.shape_118},{t:this.shape_117},{t:this.shape_116},{t:this.shape_115},{t:this.shape_114},{t:this.shape_113},{t:this.shape_112},{t:this.shape_111}]},1).to({state:[{t:this.shape_130},{t:this.shape_129},{t:this.shape_128},{t:this.shape_127},{t:this.shape_126},{t:this.shape_125},{t:this.shape_124},{t:this.shape_123},{t:this.shape_122}]},3).to({state:[{t:this.shape_125},{t:this.shape_124},{t:this.shape_122},{t:this.shape_133},{t:this.shape_132},{t:this.shape_130},{t:this.shape_129},{t:this.shape_128},{t:this.shape_131}]},1).to({state:[{t:this.shape_142},{t:this.shape_141},{t:this.shape_140},{t:this.shape_139},{t:this.shape_138},{t:this.shape_137},{t:this.shape_136},{t:this.shape_135},{t:this.shape_134}]},1).to({state:[{t:this.shape_151},{t:this.shape_150},{t:this.shape_149},{t:this.shape_148},{t:this.shape_147},{t:this.shape_146},{t:this.shape_145},{t:this.shape_144},{t:this.shape_143}]},1).to({state:[{t:this.shape_160},{t:this.shape_159},{t:this.shape_158},{t:this.shape_157},{t:this.shape_156},{t:this.shape_155},{t:this.shape_154},{t:this.shape_153},{t:this.shape_152}]},1).to({state:[{t:this.shape_169},{t:this.shape_168},{t:this.shape_167},{t:this.shape_166},{t:this.shape_165},{t:this.shape_164},{t:this.shape_163},{t:this.shape_162},{t:this.shape_161}]},1).to({state:[{t:this.shape_177},{t:this.shape_176},{t:this.shape_167},{t:this.shape_165},{t:this.shape_166},{t:this.shape_175},{t:this.shape_174},{t:this.shape_173},{t:this.shape_161},{t:this.shape_172},{t:this.shape_171},{t:this.shape_170}]},2).to({state:[{t:this.shape_177},{t:this.shape_176},{t:this.shape_171},{t:this.shape_182},{t:this.shape_181},{t:this.shape_167},{t:this.shape_165},{t:this.shape_166},{t:this.shape_180},{t:this.shape_179},{t:this.shape_178},{t:this.shape_161}]},2).to({state:[{t:this.shape_192},{t:this.shape_191},{t:this.shape_190},{t:this.shape_189},{t:this.shape_188},{t:this.shape_187},{t:this.shape_186},{t:this.shape_166},{t:this.shape_185},{t:this.shape_184},{t:this.shape_183},{t:this.shape_161}]},2).to({state:[{t:this.shape_200},{t:this.shape_199},{t:this.shape_198},{t:this.shape_197},{t:this.shape_196},{t:this.shape_187},{t:this.shape_186},{t:this.shape_166},{t:this.shape_195},{t:this.shape_194},{t:this.shape_193},{t:this.shape_161}]},1).to({state:[{t:this.shape_212},{t:this.shape_211},{t:this.shape_210},{t:this.shape_209},{t:this.shape_208},{t:this.shape_207},{t:this.shape_206},{t:this.shape_205},{t:this.shape_204},{t:this.shape_203},{t:this.shape_202},{t:this.shape_201}]},1).to({state:[]},8).wait(6));
 
 	// Layer 4
+	this.play_btn = new lib.play_btn();
+	this.play_btn.parent = this;
+	this.play_btn.setTransform(476,952.7,1,1,0,0,0,84,35.8);
+	new cjs.ButtonHelper(this.play_btn, 0, 1, 2, false, new lib.play_btn(), 3);
+
 	this.shape_213 = new cjs.Shape();
 	this.shape_213.graphics.lf(["#6BFFFF","#0087F0"],[0,1],0,301.9,0,-301.8).s().p("Egy3AxoMAAAhjPMBlvAAAMAAABjPg");
 	this.shape_213.setTransform(320.4,312.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape_213).wait(72));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_213},{t:this.play_btn}]}).wait(72));
 
 	// Layer 5
 	this.shape_214 = new cjs.Shape();
